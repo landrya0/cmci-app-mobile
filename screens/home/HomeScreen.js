@@ -1,11 +1,53 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
+import FadingSlides from 'react-native-fading-slides';
+
+const slides = [
+  {
+    image: require('../../assets/homeslider/louange.jpg'),
+    imageWidth: 100,
+    imageHeight: 100,
+    title: 'Hello World',
+    subtitle: 'This is a beautiful world',
+    titleColor: '#fff',
+    subtitleColor: '#fff',
+  },
+  {
+    image: require('../../assets/homeslider/bible.jpg'),
+    imageWidth: 200,
+    imageHeight: 100,
+    title: 'Bye World',
+    subtitle: 'This is a see you soon',
+    titleColor: '#fff',
+    subtitleColor: '#fff',
+  },
+  {
+    image: require('../../assets/homeslider/croix.jpg'),
+    imageWidth: 200,
+    imageHeight: 100,
+    title: 'Bye World',
+    subtitle: 'This is a see you soon',
+    titleColor: '#fff',
+    subtitleColor: '#fff',
+  }
+];
 
 export default class HomeScreen extends React.Component {
+
+  static navigationOptions = {
+     title: "CMCI Paris"
+   };
+
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+      <View>
+        <FadingSlides
+         slides={slides}
+         fadeDuration={1200}
+         stillDuration={2000}
+         height={500}
+         startAnimation={true}
+       />
       </View>
     );
   }
