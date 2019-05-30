@@ -6,16 +6,16 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import AboutStack from './navigation/AboutStack';
 import EventsStack from './navigation/EventsStack';
 import HomeStack from './navigation/HomeStack';
-import LitteratureStack from './navigation/LitteratureStack';
-import MinistereStack from './navigation/MinistereStack';
+import BooksStack from './navigation/BooksStack';
+import MinistryStack from './navigation/MinistryStack';
 
 
 const TabNavigator = createBottomTabNavigator(
   {
     Home: HomeStack,
     Events: EventsStack,
-    Litterature: LitteratureStack,
-    Ministere: MinistereStack,
+    Books: BooksStack,
+    Ministry: MinistryStack,
     About: AboutStack,
   },
   {
