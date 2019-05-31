@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import AppNavigator from "./navigation/AppNavigator";
 
-export default class App extends Component {
+export default class App extends React.Component {
   state = {};
 
   render () {

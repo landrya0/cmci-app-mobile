@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 
-import EventCard from "./event-card/EventCard";
+import EventCard from "./components/event-card/EventCard";
 
 export default class EventsScreen extends React.Component {
   state = {
