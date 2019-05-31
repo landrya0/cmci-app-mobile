@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 import AppNavigator from "./navigation/AppNavigator";
 
 export default class App extends Component {
