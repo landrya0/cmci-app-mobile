@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList, TouchableWithoutFeedback } from "react-native";
 
 import EventCard from "./event-card/EventCard";
 import DefaultStyles from './../../constants/styles';
@@ -43,7 +43,13 @@ export default class EventsScreen extends React.Component {
       <FlatList
         style={styles.container}
         data={this.state.events}
-        renderItem={({item}) => <EventCard key={item.key} data={item} />}
+        renderItem={({item}) => (
+          <TouchableWithoutFeedback onPress={ () => this.props.navigation.navigate('EventDetails') }>
+            {/* <Text>This is a text</Text> */}
+            <EventCard key={item.key} data={item} />
+          </TouchableWithoutFeedback>
+        )
+      }
       />
     );
   }

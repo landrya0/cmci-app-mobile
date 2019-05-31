@@ -14,7 +14,6 @@ import MinistryScreen from '../screens/ministry/MinistryScreen';
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
 });
-
 HomeStack.navigationOptions = {
   tabBarLabel: 'Accueil',
   tabBarIcon: ({focused}) => (
@@ -32,6 +31,9 @@ HomeStack.navigationOptions = {
 const EventsStack = createStackNavigator({
   Events: EventsScreen,
   EventDetails : EventDetailsScreen,
+},
+{
+  initialRouteName: 'EventDetails',
 });
 EventsStack.navigationOptions = {
   tabBarLabel: 'Evenements',
@@ -99,9 +101,13 @@ AboutStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  EventsStack,
-  HomeStack,
-  BooksStack,
-  MinistryStack,
-  AboutStack,
-});
+    HomeStack,
+    EventsStack,
+    BooksStack,
+    MinistryStack,
+    AboutStack,
+  },
+  {
+    initialRouteName: 'EventsStack', //TODO: This should be set to the HomeStack
+  }
+);

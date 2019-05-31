@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableHighlight } from "react-native";
 
 import DefaultStyles from './../../../constants/styles';
 import PSText from './../../../components/PSText';
@@ -12,7 +12,9 @@ export default class EventCard extends React.Component {
   render() {
     return (
       <View style={styles.card}>
-        <Image source={{uri : this.props.data.imgUri}} style={styles.image} />
+        <TouchableHighlight>
+          <Image source={{uri : this.props.data.imgUri}} style={styles.image} />
+        </TouchableHighlight>
         <View style={styles.cardBody}>
           <PSText type='Italic' style={styles.subtitle}>{this.props.data.datetime + '  -  ' + this.props.data.town}</PSText>
           <PSText type='Bold' style={styles.title}>{this.props.data.title}</PSText>
