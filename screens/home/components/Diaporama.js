@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
 
 import Carousel from 'react-native-snap-carousel';
 
@@ -19,36 +19,31 @@ export default class Diaporama extends React.Component {
     this.state = {
       images: [
         {
-          id: "WpIAc9by5iU",
-          thumbnail: "https://img.youtube.com/vi/D9ioyEvdggk/hqdefault.jpg",
-          title: "Led Zeppelin - Stairway To Heaven"
-        }, {
-          id: "sNPnbI1arSE",
-          thumbnail: "https://img.youtube.com/vi/sNPnbI1arSE/hqdefault.jpg",
-          title: "Eminem - My Name Is"
-        }, {
-          id: "VOgFZfRVaww",
-          thumbnail: "https://img.youtube.com/vi/VOgFZfRVaww/hqdefault.jpg",
-          title: ""
+          uri: "https://images.pexels.com/photos/2014775/pexels-photo-2014775.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+        },{
+          uri: "https://images.pexels.com/photos/1437872/pexels-photo-1437872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+        },{
+          uri: "https://images.pexels.com/photos/70847/cross-sunset-sunrise-hill-70847.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
         }
       ]
     };
-
-    //console.log("ThumbnailCarousel Props: ", this.props)
   }
 
   handleSnapToItem(index){
    console.log("snapped to ", index)
  }
 
-  _renderItems({item, index}) {
+  _renderItems( {item, index} ) {
     return (
-      <View style={styles.slide}>
-        <Text style={styles.title}>{ item.title }</Text>
+      <View>
+        <Image
+          style={{width: '100%', height: 200}}
+          source={{uri: item.uri}}
+        />
       </View>
     );
   }
-  
+
   render () {
     return (
         <Carousel
