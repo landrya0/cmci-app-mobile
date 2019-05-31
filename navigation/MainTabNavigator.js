@@ -97,8 +97,8 @@ AboutStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
   EventsStack,
+  HomeStack,
   BooksStack,
   MinistryStack,
   AboutStack,
