@@ -1,8 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import { View, Text, StyleSheet } from "react-native";
 import AppNavigator from "./navigation/AppNavigator";
 
-export default class App extends React.Component {
+export default class App extends Component {
   state = {};
 
   render () {

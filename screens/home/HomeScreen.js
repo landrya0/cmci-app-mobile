@@ -1,20 +1,18 @@
-import React from "react";
-import { View, Text, Button } from "react-native";
+import React from 'react';
+import {View} from 'react-native';
 
-import Diaporama from './components/Diaporama';
+import BannerVideoPlayer from './components/BannerVideoPlayer';
 
 export default class HomeScreen extends React.Component {
-
   static navigationOptions = {
-     title: "CMCI Paris"
-   };
+    title: 'CMCI Paris',
+  };
 
-  render() {
+  render () {
     return (
       <View>
-        <Diaporama/>
-
+        <BannerVideoPlayer />
       </View>
     );
   }
-};
+}
