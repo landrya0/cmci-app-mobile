@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 
 import AboutScreen from '../screens/about/AboutScreen';
 import EventsScreen from '../screens/events/EventsScreen';
+import EventDetailsScreen from '../screens/events/EventDetailsScreen'
 import HomeScreen from '../screens/home/HomeScreen';
 import BooksScreen from '../screens/books/BooksScreen';
 import MinistryScreen from '../screens/ministry/MinistryScreen';
@@ -29,7 +30,8 @@ HomeStack.navigationOptions = {
 };
 
 const EventsStack = createStackNavigator({
-  Events: EventsScreen
+  Events: EventsScreen,
+  EventDetails : EventDetailsScreen,
 });
 EventsStack.navigationOptions = {
   tabBarLabel: 'Evenements',
