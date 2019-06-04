@@ -1,22 +1,19 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-
+import React from 'react';
+import {StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Ripple from 'react-native-material-ripple';
 
 export default class RippleButton extends React.Component {
-  state = {};
-
-  render() {
+  render () {
     return (
       <Ripple style={styles.main}>
-        <Icon name={this.props.name} size={30} color={this.props.color}></Icon>
+        <Icon name={this.props.name} size={30} color={this.props.color} />
       </Ripple>
     );
-  };
-};
+  }
+}
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
   main: {
     width: 50,
     height: 50,
@@ -26,5 +23,5 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     overflow: 'hidden',
     marginRight: 10,
-  }
+  },
 });
